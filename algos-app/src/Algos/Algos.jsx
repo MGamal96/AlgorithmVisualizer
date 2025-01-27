@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.css';
 
 class Algorithms extends React.Component {
   constructor(nums) {
@@ -13,7 +14,7 @@ class Algorithms extends React.Component {
   resetArr() {
     const arr = [];
     for (let i = 0; i < 10; i++) {
-      arr.push(this.randomNumbers(0, 9));
+      arr.push(this.randomNumbers(5, 250));
     }
     this.setState({ arr });
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css'
 
 class Algorithms extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class Algorithms extends React.Component {
   resetArr() {
     const arr = [];
     for (let i = 0; i < 10; i++) {
-      arr.push(this.randomNumbers(0, 9)); // Call `this.randomNumbers`
+      arr.push(this.randomNumbers(5, 250));
     }
     this.setState({ arr });
   }
@@ -32,7 +33,7 @@ class Algorithms extends React.Component {
             key={index}
             style={{ height: `${value}px` }}
           >
-            {value} {/* Display the number inside the bar */}
+            {value}
           </div>
         ))}
       </div>
@@ -43,7 +44,7 @@ class Algorithms extends React.Component {
     return (
       <div>
         <h1>Array Visualization</h1>
-        {this.display()} {/* Call the `display` method to render the array */}
+        {this.display()}
       </div>
     );
   }

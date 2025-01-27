@@ -1,0 +1,23 @@
+.arr-container {
+  position: relative;  /* Changed from absolute to relative */
+  margin: 2rem auto;  /* Added auto margins for horizontal centering */
+  display: flex;
+  align-items: flex-end;
+  height: 300px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  width: 200px;  /* Added explicit width */
+}
+
+.arr-bar {
+  width: 10px;
+  display: inline-block;
+  margin: 0 5px;
+  background-color: #4CAF50;
+  transition: height 0.3s ease;
+}
+
+.arr-bar:hover {
+  background-color: #45a049;
+}
