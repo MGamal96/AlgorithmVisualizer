@@ -1,23 +1,86 @@
 .arr-container {
-  position: relative;  /* Changed from absolute to relative */
-  margin: 2rem auto;  /* Added auto margins for horizontal centering */
-  display: flex;
-  align-items: flex-end;
-  height: 300px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  width: 200px;  /* Added explicit width */
+    position: relative;
+    margin: 2rem auto;
+    display: flex;
+    align-items: flex-end;
+    height: 300px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .arr-bar {
-  width: 10px;
-  display: inline-block;
-  margin: 0 5px;
-  background-color: #4CAF50;
-  transition: height 0.3s ease;
+    width: 30px;
+    display: inline-block;
+    margin: 0 8px;
+    background-color: #4CAF50;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 2px 2px 0 0;
 }
 
 .arr-bar:hover {
-  background-color: #45a049;
+    background-color: #45a049;
+    transform: scaleY(1.02);
+}
+
+.arr-bar::before {
+    content: attr(data-value);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    white-space: nowrap;
+}
+
+.new-array-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.new-array-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.new-array-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.new-array-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+.new-array-btn.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.new-array-btn svg {
+    margin-right: 8px;
+    vertical-align: middle;
 }

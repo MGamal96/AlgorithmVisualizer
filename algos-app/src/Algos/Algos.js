@@ -13,8 +13,8 @@ class Algorithms extends React.Component {
 
   resetArr() {
     const arr = [];
-    for (let i = 0; i < 10; i++) {
-      arr.push(this.randomNumbers(5, 250));
+    for (let i = 0; i < 15; i++) {
+      arr.push(this.randomNumbers(20, 250));
     }
     this.setState({ arr });
   }
@@ -36,6 +36,7 @@ class Algorithms extends React.Component {
             {value}
           </div>
         ))}
+	 <button className="new-array-btn" onClick={() => this.resetArr()}>New Array</button>
       </div>
     );
   }
